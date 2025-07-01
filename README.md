@@ -2,7 +2,7 @@
 
 A sleek and interactive typing speed test application built using modern web technologies. Users can test their typing skills, measure words per minute (WPM), accuracy, errors, and typed characters — all in real time!
 
-![Typing Speed Test Demo](https://raw.githubusercontent.com/prathvish-shetty/typing-speed-test/main/src/assets/sample.png)
+![Typing Speed Test Demo](https://github.com/Prathvish-Shetty/typing-test/blob/main/src/assets/sample.png)
 
 ## 🚀 Features
 
