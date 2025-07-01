@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# ⌨️ Typing Speed Test Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and interactive typing speed test application built using modern web technologies. Users can test their typing skills, measure words per minute (WPM), accuracy, errors, and typed characters — all in real time!
 
-Currently, two official plugins are available:
+![Typing Speed Test Demo](https://raw.githubusercontent.com/prathvish-shetty/typing-speed-test/main/src/assets/sample.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🕒 30-second typing test  
+- 📈 Live results: WPM, accuracy, errors, and characters typed  
+- 🎯 WPM calculated using standard formula  
+- 🎨 Smooth UI animations with Framer Motion  
+- 🔥 Fully responsive and fast  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📊 Metrics Explained
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **WPM (Words Per Minute):** Number of correct characters typed divided by 5, normalized to 1 minute  
+  `WPM = (correctChars / 5) * (60 / testDurationInSeconds)`
+- **Accuracy:** `(Correct Characters / Total Typed Characters) × 100`
+- **Errors:** Number of mismatches between typed and expected text
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + TypeScript  
+- **Styling:** Tailwind CSS  
+- **Animations:** Framer Motion  
+- **State Management:** Custom React Hooks  
+
+## 📦 Getting Started
+
+```bash
+git clone https://github.com/prathvish-shetty/typing-test.git
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
